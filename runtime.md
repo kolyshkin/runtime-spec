@@ -126,6 +126,12 @@ Attempting to `start` a container that is not [`created`](#state) MUST have no e
 This operation MUST run the user-specified program as specified by [`process`](config.md#process).
 This operation MUST generate an error if `process` was not set.
 
+### <a name="runtimeRun" />Run
+`run <container-id>`
+
+This operation has the same semantics as [create](#create) followed by
+[start](#start).
+
 ### <a name="runtimeKill" />Kill
 `kill <container-id> <signal>`
 
