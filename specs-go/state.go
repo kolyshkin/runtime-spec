@@ -54,3 +54,5 @@ type ContainerProcessState struct {
 	// State of the container.
 	State State `json:"state"`
 }
+
+func unusedRootTest() {}

@@ -38,8 +38,10 @@ jobs:
 
       - name: run golangci-lint
         run: |
-          golangci-lint run
-          cd schema/validate && golangci-lint run --path-prefix schema/validate
+          rc=0
+          golangci-lint run || rc=1
+          cd schema/validate && golangci-lint run --path-prefix schema/validate || rc=1
+          exit $rc
 
       - name: run tests
         run: |

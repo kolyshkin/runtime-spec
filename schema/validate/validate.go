@@ -98,3 +98,5 @@ func formatFilePath(path string) (string, error) {
 	}
 	return absPath, nil
 }
+
+func unusedValidateTest() {}
